@@ -102,6 +102,13 @@ nav {
     position: absolute;
     transform: translateX(130px) translateY(130px);
     z-index: 3;
+
+
+    animation-name: shake;
+    animation-duration: 0.7s;
+    animation-direction: alternate;
+    animation-delay: 9ms;
+    animation-iteration-count: infinite;
 }
 .hero-images{
     margin-left: auto;
@@ -162,17 +169,53 @@ nav {
     width: 201px;
     height: 44px;
     padding: 12px 20px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    box-sizing: border-box;
     border: none;
     border-radius: 10000px;
     background: linear-gradient(60deg, #F7E93F, #FB09B4, #9100F8);
+}
+.spotify-btn:hover{
+    color: #FFFFFF;
+    background: #9100F8;
+    transition: background 1000ms ease;
 }
 .subscribe-btn{
     width: 147px;
     height: 44px;
     padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00FF88;
     border: 1px solid #00FF88;
     border-radius: 10000px;
     background-color: transparent;
+}
+.subscribe-btn:hover{
+    color: #250D44;
+    background-color: #00FF88;
+    transition: background-color 1500ms ease;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(130px) rotate(2deg) translateY(130px);
+    }
+    25%{
+        transform: translateX(130px) rotate(-2deg) translateY(130px);
+    }
+    50%{
+        transform: translateX(130px) rotate(2deg) translateY(130px);
+    }
+    75%{
+        transform: translateX(130px) rotate(-2deg) translateY(130px);
+    }
+    100%{
+        transform: translateX(130px) rotate(2deg) translateY(130px);
+    }
 }
 
 
