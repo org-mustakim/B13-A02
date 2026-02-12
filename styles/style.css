@@ -84,16 +84,15 @@ nav {
 .hero{
     height: 760px;
     width: 100%;
-    /* position: relative; */
     background-image: url(../assets/hero-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
 }
 .badge{
-    max-width: 43px;
+    width: 43px;
     color: #1A0B2E;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     border: none;
     border-radius: 1000px;
@@ -101,21 +100,31 @@ nav {
     padding: 8px 16px;
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
     position: absolute;
-    left: 65%;
-    bottom: 55%;
+    transform: translateX(130px) translateY(130px);
+    z-index: 3;
+}
+.hero-images{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
 }
 .hero-mic{
+    max-width: 116.67px;
+    max-height: 175px;
     position: absolute;
-    left: 45%;
-    bottom: 52%;
+    z-index: 2;
+    transform: translateX(0px) translateY(180px);
 }
 .hero-circle{
-    margin-top: 101px;
-    position: absolute;
-    left: 38.5%;
+    margin-top: 7%;
+    max-width: 350px;
+    max-height: 350px;
+    transform: translateX(0px) ;
+    z-index: 1;
 }
 .slogan{
-    padding-top: 491px;
+    padding-top: 40px;
     color: #FFFFFF;
     font-size: 3.75rem;
     font-weight: 800;
@@ -479,6 +488,26 @@ footer{
     }
     .hamburger-icon:hover{
         cursor: pointer;
+    }
+    .hero-mic{
+        max-width: 116.67px;
+        max-height: 175px;
+        position: absolute;
+        z-index: 2;
+        transform: translateY(180px);
+    }
+    .hero-circle{
+        max-width: 350px;
+        max-height: 350px;
+        transform: translateX(0px) translateY(60px) ;
+        z-index: 1;
+    }
+    .slogan{
+        margin-top: 40px;
+        color: #FFFFFF;
+        font-size: 2rem;
+        font-weight: 800;
+        text-align: center;
     }
     .dual-button{
         gap: 15px;
